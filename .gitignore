@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.log
+.vscode/
+# Internal business docs — never publish
+providers/
+tools/
+STATE.md
+TASKS.md
+README.md
+CNAME
