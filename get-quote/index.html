@@ -53,7 +53,7 @@
     </div>
 
     <div class="field">
-      <label for="email">Email <span class="muted">(optional but helps)</span></label>
+      <label for="email">Email <span class="muted">(we send your quote confirmation here)</span></label>
       <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.co.za">
       <div class="err-msg"></div>
     </div>
@@ -63,7 +63,7 @@
         <label for="suburb">Suburb <span class="req">*</span></label>
         <select id="suburb" name="suburb">
           <option value="">Choose your suburb…</option>
-          <option value="bellville">Bellville</option><option value="bishopscourt">Bishopscourt</option><option value="camps-bay">Camps Bay</option><option value="claremont">Claremont</option><option value="constantia">Constantia</option><option value="durbanville">Durbanville</option><option value="hout-bay">Hout Bay</option><option value="kenilworth">Kenilworth</option><option value="newlands">Newlands</option><option value="rondebosch">Rondebosch</option><option value="sea-point">Sea Point</option><option value="tokai">Tokai</option>
+          <option value="bellville">Bellville</option><option value="bishopscourt">Bishopscourt</option><option value="camps-bay">Camps Bay</option><option value="claremont">Claremont</option><option value="constantia">Constantia</option><option value="durbanville">Durbanville</option><option value="gardens">Gardens</option><option value="hout-bay">Hout Bay</option><option value="kenilworth">Kenilworth</option><option value="muizenberg">Muizenberg</option><option value="newlands">Newlands</option><option value="observatory">Observatory</option><option value="pinelands">Pinelands</option><option value="plumstead">Plumstead</option><option value="rondebosch">Rondebosch</option><option value="sea-point">Sea Point</option><option value="somerset-west">Somerset West</option><option value="tokai">Tokai</option><option value="wynberg">Wynberg</option>
           <option value="other">Other Cape Town suburb</option>
         </select>
         <div class="err-msg"></div>
@@ -81,7 +81,7 @@
 
     <div class="row-2">
       <div class="field">
-        <label for="propertyType">Property <span class="req">*</span></label>
+        <label for="propertyType">Property <span class="muted">(optional)</span></label>
         <select id="propertyType" name="propertyType">
           <option value="">Select…</option>
           <option value="owner">I own this property</option>
@@ -89,7 +89,7 @@
           <option value="agent">I'm a managing agent</option>
           <option value="renter">I rent / am a tenant</option>
         </select>
-        <div class="hint">Specialists quote fastest for owners and landlords.</div>
+        <div class="hint">Helps the specialist prepare the right quote.</div>
         <div class="err-msg"></div>
       </div>
       <div class="field">
@@ -97,8 +97,8 @@
         <select id="budget" name="budget">
           <option value="">Not sure yet</option>
           <option value="under1000">Under R1,000</option>
-          <option value="1000-5000">R1,000, R5,000</option>
-          <option value="5000-15000">R5,000, R15,000</option>
+          <option value="1000-5000">R1,000 to R5,000</option>
+          <option value="5000-15000">R5,000 to R15,000</option>
           <option value="15000plus">R15,000+</option>
           <option value="none">Just getting information</option>
         </select>
@@ -128,19 +128,20 @@
     <div class="field">
       <label style="font-weight:600;display:flex;gap:10px;align-items:flex-start">
         <input type="checkbox" name="consent" style="width:auto;margin-top:5px">
-        <span>I'd like DryCape to pass my details to one vetted local specialist so they can contact me with a free quote. <span class="req">*</span></span>
+        <span>Yes, pass my details to one vetted Cape Town specialist so they can contact me with a free quote. We never sell your details to multiple companies. <span class="req">*</span></span>
       </label>
       <div class="err-msg"></div>
     </div>
 
     <button type="submit" class="btn btn-lg" style="width:100%">Send my enquiry, get free quotes</button>
-    <p class="form-note">Free &amp; no obligation. We match you with one specialist, not six. We never sell your details to multiple companies or post them publicly.</p>
+    <p class="form-note">Free &amp; no obligation. We match you with one specialist, not six. Your details go to a single specialist and nowhere else. See how we handle your information in our <a href="/privacy/">privacy notice</a>.</p>
   </form>
 
   <div id="form-ok" class="form-ok">
-    <h3>Thanks<span data-name="">,</span>, enquiry received ✅</h3>
-    <p>We've captured your enquiry. A vetted Cape Town specialist for your area will be in touch with a free, no-obligation quote.</p>
-    <p class="muted" style="font-size:.9rem">In the meantime, our <a href="/guides/">cost guides</a> show what's a fair price for your job.</p>
+    <h3>Thanks <span data-name="">there</span>, your enquiry is in ✅</h3>
+    <p>We are matching you with one vetted Cape Town specialist for your suburb and your problem right now. They will contact you directly, usually by phone or WhatsApp, with a free, no-obligation quote.</p>
+    <p>You do not need to enquire anywhere else. We have sent your details to one specialist, not six, so you will not be chased by a queue of cold callers. Just keep your phone handy.</p>
+    <p class="muted" style="font-size:.9rem">While you wait, our <a href="/guides/">2026 cost guides</a> show what a fair price looks like for your job, so you can sanity-check the quote when it lands.</p>
   </div>
 </div></section>
 
@@ -177,6 +178,8 @@
         <li><a href="/about/">About DryCape</a></li>
         <li><a href="/guides/">Cost guides</a></li>
         <li><a href="/get-quote/">Get a quote</a></li>
+        <li><a href="/privacy/">Privacy &amp; POPIA</a></li>
+        <li><a href="/terms/">Terms</a></li>
       </ul>
     </div>
   </div>

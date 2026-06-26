@@ -72,11 +72,15 @@ var FORM_ENDPOINT = "https://citizens-indie-bristol-angeles.trycloudflare.com/le
   function validate(d) {
     var e = {};
     if (d.name.length < 2) e.name = 'Please enter your name.';
-    if (!/^[0-9 +()\-]{9,15}$/.test(d.phone)) e.phone = 'Enter a valid SA phone number, e.g. 082 123 4567.';
-    if (d.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) e.email = 'That email doesn’t look right.';
+    // Accept any reasonable SA / international format: strip non-digits, then
+    // check the digit count. The old 9-15 character cap rejected valid +27 and
+    // pasted numbers, silently losing leads.
+    var digits = (d.phone || '').replace(/[^0-9]/g, '');
+    if (digits.length < 9 || digits.length > 15) e.phone = 'Enter a valid SA phone number, e.g. 082 123 4567.';
+    if (d.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) e.email = "That email doesn't look right.";
     if (!d.suburb) e.suburb = 'Choose your suburb.';
     if (!d.service) e.service = 'Choose the service you need.';
-    if (!d.propertyType) e.propertyType = 'Let us know if you own or rent.';
+    // propertyType is optional (it only feeds lead scoring); never block a worried homeowner on it.
     if (d.description.length < 10) e.description = 'A sentence about the problem helps the specialist quote accurately.';
     if (!d.consent) e.consent = 'Please agree so we can pass your details to one local specialist.';
     return e;
