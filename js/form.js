@@ -20,7 +20,7 @@
  */
 
 // Set this to a real endpoint to go live. While null, submissions are captured locally only.
-var FORM_ENDPOINT = "https://province-venue-naturals-nasa.trycloudflare.com/lead"; // auto-synced to live tunnel
+var FORM_ENDPOINT = "https://causing-string-feel-mouse.trycloudflare.com/lead"; // auto-synced to live tunnel
 
 (function () {
   var form = document.getElementById('quote-form');
